@@ -1,114 +1,1030 @@
+/* ========================================
+   全局
+======================================== */
+
 * {
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  min-height: 100%;
+
+html {
+  scroll-behavior: smooth;
 }
+
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei",
-               "PingFang SC", Arial, sans-serif;
-  background:
-    radial-gradient(circle at 15% 10%, rgba(70, 145, 255, .28), transparent 32%),
-    radial-gradient(circle at 90% 85%, rgba(42, 225, 171, .24), transparent 30%),
-    linear-gradient(145deg, #eef7ff 0%, #ffffff 48%, #effff8 100%);
+
+  margin: 0;
+
+  min-height: 100vh;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Microsoft YaHei",
+    "PingFang SC",
+    Arial,
+    sans-serif;
+
   color: #111827;
+
+  background:
+
+    radial-gradient(
+      circle at 10% 5%,
+      rgba(37, 125, 255, .22),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(28, 220, 158, .22),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      145deg,
+      #edf7ff 0%,
+      #ffffff 48%,
+      #effff8 100%
+    );
+
 }
+
+
+/* ========================================
+   页面主体
+======================================== */
 
 .page {
-  min-height: 100vh;
-  padding: 28px 16px 48px;
-  display: flex;
-  justify-content: center;
+
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding:
+    24px
+    16px
+    50px;
+
 }
 
-.hero {
-  width: min(100%, 920px);
+
+/* ========================================
+   海报
+======================================== */
+
+.poster-section {
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  justify-content: center;
+
 }
+
 
 .poster-wrap {
+
   width: min(100%, 520px);
+
   overflow: hidden;
+
   border-radius: 24px;
-  background: #fff;
+
+  background: #ffffff;
+
   box-shadow:
-    0 24px 70px rgba(25, 73, 130, .18),
-    0 6px 20px rgba(0, 0, 0, .08);
+
+    0 25px 70px
+    rgba(20, 80, 150, .18),
+
+    0 8px 25px
+    rgba(0, 0, 0, .08);
+
 }
+
 
 .poster-wrap img {
+
   display: block;
+
   width: 100%;
+
   height: auto;
+
 }
+
+
+/* ========================================
+   网站介绍
+======================================== */
 
 .intro {
+
+  margin:
+    25px auto
+    0;
+
   width: min(100%, 720px);
-  margin-top: 28px;
-  padding: 24px 28px;
+
+  padding:
+    24px 20px;
+
   text-align: center;
-  background: rgba(255, 255, 255, .82);
-  border: 1px solid rgba(255, 255, 255, .9);
+
+  background:
+    rgba(255, 255, 255, .85);
+
   border-radius: 22px;
-  box-shadow: 0 12px 40px rgba(30, 80, 130, .08);
-  backdrop-filter: blur(10px);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, .9);
+
+  box-shadow:
+    0 12px 40px
+    rgba(30, 80, 130, .08);
+
 }
+
 
 .intro h1 {
+
   margin: 0;
-  font-size: clamp(22px, 4vw, 34px);
-  line-height: 1.25;
-  font-weight: 800;
-  background: linear-gradient(90deg, #155eef, #10b981);
+
+  font-size:
+    clamp(24px, 5vw, 36px);
+
+  font-weight: 900;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #155eef,
+      #10b981
+    );
+
   -webkit-background-clip: text;
+
   background-clip: text;
+
   color: transparent;
+
 }
+
 
 .intro p {
-  margin: 10px 0 18px;
-  color: #4b5563;
+
+  margin:
+    10px 0 18px;
+
+  color: #6b7280;
+
   font-size: 16px;
+
 }
 
-.tip {
-  display: inline-flex;
-  gap: 8px;
-  flex-wrap: wrap;
+
+.intro-tags {
+
+  display: flex;
+
   justify-content: center;
-  align-items: center;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: #eff6ff;
-  color: #374151;
-  font-size: 14px;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
 }
 
-.tip strong {
-  color: #155eef;
+
+.intro-tags span {
+
+  padding:
+    8px 13px;
+
+  border-radius: 999px;
+
+  background:
+    #eff6ff;
+
+  color:
+    #2563eb;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
 }
+
+
+/* ========================================
+   资源区域
+======================================== */
+
+.resource-section {
+
+  width: min(100%, 720px);
+
+  margin:
+    25px auto 0;
+
+  padding:
+    25px 20px;
+
+  background:
+    rgba(255, 255, 255, .92);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 12px 40px
+    rgba(30, 80, 130, .09);
+
+}
+
+
+/* ========================================
+   标题
+======================================== */
+
+.section-title {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+
+}
+
+
+.title-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #155eef,
+      #36a3ff
+    );
+
+  font-size: 25px;
+
+}
+
+
+.section-title h2 {
+
+  margin: 0;
+
+  font-size: 24px;
+
+}
+
+
+.section-title p {
+
+  margin:
+    4px 0 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+}
+
+
+/* ========================================
+   网盘按钮
+======================================== */
+
+.download-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+}
+
+
+.download-btn {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  min-height: 72px;
+
+  padding:
+    12px 18px;
+
+  border-radius: 16px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 0, 0, .08);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    opacity .2s ease;
+
+}
+
+
+.download-btn:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 12px 28px
+    rgba(0, 0, 0, .13);
+
+}
+
+
+.download-btn:active {
+
+  transform:
+    translateY(0);
+
+}
+
+
+/* ========================================
+   网盘颜色
+======================================== */
+
+.baidu {
+
+  background:
+    linear-gradient(
+      135deg,
+      #1677ff,
+      #3f9cff
+    );
+
+}
+
+
+.quark {
+
+  background:
+    linear-gradient(
+      135deg,
+      #12ad68,
+      #28c981
+    );
+
+}
+
+
+.aliyun {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff8200,
+      #ffad33
+    );
+
+}
+
+
+.cloud123 {
+
+  background:
+    linear-gradient(
+      135deg,
+      #2777e8,
+      #5b9cff
+    );
+
+}
+
+
+/* ========================================
+   网盘图标
+======================================== */
+
+.download-icon {
+
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    rgba(255,255,255,.18);
+
+  border-radius: 12px;
+
+  font-size: 23px;
+
+  flex-shrink: 0;
+
+}
+
+
+/* ========================================
+   网盘文字
+======================================== */
+
+.download-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+}
+
+
+.download-text strong {
+
+  font-size: 18px;
+
+  line-height: 1.3;
+
+}
+
+
+.download-text small {
+
+  margin-top: 3px;
+
+  opacity: .85;
+
+  font-size: 12px;
+
+}
+
+
+/* ========================================
+   箭头
+======================================== */
+
+.arrow {
+
+  font-size: 25px;
+
+  font-weight: 300;
+
+}
+
+
+/* ========================================
+   提示
+======================================== */
+
+.resource-tip {
+
+  margin-top: 16px;
+
+  padding:
+    12px 15px;
+
+  border-radius: 12px;
+
+  background:
+    #fffbea;
+
+  color:
+    #92700c;
+
+  font-size: 13px;
+
+  text-align: center;
+
+}
+
+
+/* ========================================
+   每日更新
+======================================== */
+
+.update-section {
+
+  width: min(100%, 720px);
+
+  margin:
+    20px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding:
+    20px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ecfdf5,
+      #f0fdf4
+    );
+
+  border:
+    1px solid
+    #d1fae5;
+
+}
+
+
+.update-icon {
+
+  width: 52px;
+
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background:
+    #10b981;
+
+  color: white;
+
+  font-size: 25px;
+
+}
+
+
+.update-section h2 {
+
+  margin: 0;
+
+  font-size: 20px;
+
+  color: #047857;
+
+}
+
+
+.update-section p {
+
+  margin:
+    5px 0 0;
+
+  color: #4b5563;
+
+  font-size: 14px;
+
+}
+
+
+/* ========================================
+   使用说明
+======================================== */
+
+.guide-section {
+
+  width: min(100%, 720px);
+
+  margin:
+    20px auto 0;
+
+  padding:
+    25px 20px;
+
+  border-radius: 22px;
+
+  background:
+    rgba(255,255,255,.9);
+
+  box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.06);
+
+}
+
+
+.guide-section h2 {
+
+  margin:
+    0 0 20px;
+
+  font-size: 23px;
+
+}
+
+
+.guide-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+}
+
+
+.guide-item {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+}
+
+
+.guide-item > span {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 40px;
+
+  height: 40px;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background:
+    #eff6ff;
+
+  color:
+    #2563eb;
+
+  font-weight: 800;
+
+}
+
+
+.guide-item strong {
+
+  display: block;
+
+  font-size: 16px;
+
+}
+
+
+.guide-item p {
+
+  margin:
+    4px 0 0;
+
+  color:
+    #6b7280;
+
+  font-size: 13px;
+
+}
+
+
+/* ========================================
+   联系方式
+======================================== */
+
+.contact-section {
+
+  width: min(100%, 720px);
+
+  margin:
+    20px auto 0;
+
+  padding:
+    22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #164ee8,
+      #2768ff
+    );
+
+  color: white;
+
+  box-shadow:
+    0 15px 35px
+    rgba(22, 78, 232, .22);
+
+}
+
+
+.contact-icon {
+
+  width: 52px;
+
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background:
+    rgba(255,255,255,.18);
+
+  font-size: 25px;
+
+}
+
+
+.contact-section h2 {
+
+  margin: 0;
+
+  font-size: 20px;
+
+}
+
+
+.contact-section p {
+
+  margin:
+    5px 0 0;
+
+  font-size: 14px;
+
+  opacity: .9;
+
+}
+
+
+.contact-section strong {
+
+  color:
+    #ffe44d;
+
+}
+
+
+/* ========================================
+   页脚
+======================================== */
+
+footer {
+
+  margin-top:
+    35px;
+
+  text-align: center;
+
+  color:
+    #6b7280;
+
+  font-size: 13px;
+
+}
+
+
+footer p {
+
+  margin:
+    5px 0;
+
+}
+
+
+.footer-small {
+
+  font-size: 11px;
+
+  opacity: .7;
+
+}
+
+
+/* ========================================
+   手机端
+======================================== */
 
 @media (max-width: 600px) {
+
   .page {
-    padding: 12px 10px 30px;
+
+    padding:
+      12px
+      10px
+      35px;
+
   }
+
 
   .poster-wrap {
+
     border-radius: 18px;
+
   }
+
 
   .intro {
-    margin-top: 18px;
-    padding: 20px 16px;
+
+    margin-top: 16px;
+
+    padding:
+      20px 15px;
+
     border-radius: 18px;
+
   }
 
-  .intro p {
-    font-size: 14px;
+
+  .intro h1 {
+
+    font-size: 25px;
+
   }
+
+
+  .intro p {
+
+    font-size: 14px;
+
+  }
+
+
+  .resource-section {
+
+    margin-top: 16px;
+
+    padding:
+      20px 14px;
+
+    border-radius: 19px;
+
+  }
+
+
+  .section-title h2 {
+
+    font-size: 21px;
+
+  }
+
+
+  .download-btn {
+
+    min-height: 68px;
+
+    padding:
+      11px 14px;
+
+    border-radius: 14px;
+
+  }
+
+
+  .download-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+  }
+
+
+  .download-text strong {
+
+    font-size: 16px;
+
+  }
+
+
+  .update-section {
+
+    padding:
+      17px 15px;
+
+  }
+
+
+  .update-section h2 {
+
+    font-size: 18px;
+
+  }
+
+
+  .guide-section {
+
+    padding:
+      20px 15px;
+
+  }
+
+
+  .contact-section {
+
+    padding:
+      18px 15px;
+
+  }
+
+}
+
+
+/* ========================================
+   超小屏手机
+======================================== */
+
+@media (max-width: 380px) {
+
+  .intro-tags {
+
+    gap: 5px;
+
+  }
+
+
+  .intro-tags span {
+
+    padding:
+      6px 9px;
+
+    font-size: 11px;
+
+  }
+
+
+  .download-btn {
+
+    gap: 9px;
+
+  }
+
+
+  .download-text small {
+
+    font-size: 11px;
+
+  }
+
+
+  .arrow {
+
+    font-size: 20px;
+
+  }
+
 }
